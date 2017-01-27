@@ -8,9 +8,10 @@ Things I learned while making this:
 -I elected to create and update a few data structures to accompany the puzzle: one to keep track of possibilities per cell, and the other to keep track of where each value can appear within a particular row/column/cluster. I’m not sure how this compares speed-wise to keeping the data structure really simple and carrying out the logical deductions from scratch each time. But either way, the updating is difficult, bug-wise. It might have been better to first try the really simple structure, since worst-case, it’s slow, and then it functions as a tool to check the more complex version.
 -It would be better/more readable to make a sudoku class, since I was frequently passing to a function three separate data structures describing the same puzzle.
 -I made a nice print function before anything else, which was very useful with debugging.
+-After finishing the program, I searched the web and found Peter Norvig’s writeup of a far superior solution (http://norvig.com/sudoku.html). There’s a lot to learn from this, but two things that stuck out are the convenience of using strings for possibilities in place of lists (easier copying) and the general structure of constraint propagation vs backtracking.
 
 
-Example output:
+Example output from sudoku_solver.py:
 -----------------------------------
             New puzzle
 -----------------------------------
